@@ -1,7 +1,7 @@
-import * as Knex from 'knex'
+import * as Knex from 'knex';
 
 export const seedsConfig: Knex.SeedsConfig = {
-  directory: './dist/models/migrations/seeds',
-}
+  directory: './build/model/migrations/seeds'
+};
 
-export default seedsConfig
+export default seedsConfig;

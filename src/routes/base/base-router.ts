@@ -1,11 +1,10 @@
-import { Router, Request, Response, NextFunction } from 'express';
-import { Injectable } from '../../di/di';
+import { Router } from 'express';
 import { injectable } from 'inversify';
 
 @injectable()
 export abstract class BaseRouter {
-  router: Router
+  router: Router;
   constructor() {
-    this.router = Router()
+    this.router = Router();
   }
 }

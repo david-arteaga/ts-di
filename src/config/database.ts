@@ -1,14 +1,14 @@
-import * as Knex from 'knex'
+import * as Knex from 'knex';
 
 export const config: Knex.Config = {
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
-    user : 'ts',
-    password : 'ts',
-    database : 'ts'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME
   },
-  debug: (process.env.DEBUG_KNEX || '').toLowerCase() === 'true',
-}
+  debug: (process.env.DEBUG_KNEX || '').toLowerCase() === 'true'
+};
 
-export default config
+export default config;

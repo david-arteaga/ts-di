@@ -1,8 +1,8 @@
-import * as Knex from 'knex'
+import * as Knex from 'knex';
 
 export const migrationsConfig: Knex.MigratorConfig = {
-  directory: './dist/models/migrations',
-  tableName: 'migrations',
-}
+  directory: './build/model/migrations',
+  tableName: 'migrations'
+};
 
-export default migrationsConfig
+export default migrationsConfig;

@@ -1,10 +1,8 @@
-import { Model } from "../../models/model";
-import { Inject, Injectable } from '../../di/di';
+import { Model } from '../../model/model';
+import { Inject } from '../../di';
 import { injectable } from 'inversify';
 
 @injectable()
 export abstract class BaseService {
-  constructor(
-    @Inject(Model) protected model: Model,
-  ) {}
+  constructor(@Inject(Model) protected model: Model) {}
 }

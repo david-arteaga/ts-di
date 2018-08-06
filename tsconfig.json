@@ -1,8 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2017",
     "module": "commonjs",
-    "outDir": "dist",
+    "moduleResolution": "node",
+    "lib": ["es2017"],
+    "outDir": "build",
+    "strict": true,
     "rootDir": "src",
     "inlineSourceMap": true,
     "inlineSources": true,
@@ -13,14 +16,11 @@
     "noImplicitThis": true,
     "noImplicitAny": true,
     "preserveConstEnums": true,
-  }
-  ,"compileOnSave": true
-  ,"include": [
-    "src/*",
-    "src/**/*"
-  ]
-  ,"exclude": [
-    "dist",
-    "node_modules"
-  ]
+    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
+  "compileOnSave": true,
+  "include": ["src/*", "src/**/*"],
+  "exclude": ["build", "node_modules"]
 }
